@@ -8,7 +8,6 @@ Las mismas puedan ser visualizadas en una app mobile y en base a eso poder tomar
 ### Sensores
 * Sensor Temperatura
 * Sensor Humedad de la tierra
-* Sensor Nivel agua
 * Sensor Lluvia por goteo
 
 ### Actuadores

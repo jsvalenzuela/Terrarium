@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="net.londatiga.android.bluetooth.AutomaticoTransferenciaArduino"
+    android:theme="@style/AppTheme">
+
+    <TextView
+        android:id="@+id/tv_Temperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="74dp"
+        android:text="Temperatura Actual"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <TextView
+        android:id="@+id/tv_SensorTemp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_Temperatura"
+        android:layout_alignBottom="@+id/tv_Temperatura"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="-11dp"
+        android:layout_toEndOf="@+id/tv_Temperatura"
+        android:layout_toRightOf="@+id/tv_Temperatura"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <TextView
+        android:id="@+id/tv_Humedad"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Temperatura"
+        android:layout_marginTop="17dp"
+        android:text="Humedad Actual"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <TextView
+        android:id="@+id/tv_SensorHumedad"
+        android:layout_width="171dp"
+        android:layout_height="26dp"
+        android:layout_alignStart="@+id/tv_SensorTemp"
+        android:layout_alignLeft="@+id/tv_SensorTemp"
+        android:layout_alignBottom="@+id/tv_Humedad"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="-11dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <TextView
+        android:id="@+id/tvEstadoRiego"
+        android:layout_width="124dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="119dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="15dp"
+        android:text="Humedad Ideal" />
+
+    <TextView
+        android:id="@+id/tvHumedadServicio"
+        android:layout_width="105dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/tvSueloTrans"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Humedad"
+        android:layout_marginTop="18dp"
+        android:text="Planta Elegida" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:text="Suelo Ideal" />
+
+    <TextView
+        android:id="@+id/tvTipoPlantaTrans"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_SensorHumedad"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvSueloTrans"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTipoPlantaTrans"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="129dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="16dp"
+        android:text="Temperatura ideal" />
+
+    <TextView
+        android:id="@+id/tvTemperaturaServicio"
+        android:layout_width="101dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/tvHumedadServicio"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4" />
+
+
+</RelativeLayout>

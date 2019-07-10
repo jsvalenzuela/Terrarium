@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30sp"
+    tools:context=".AutomaticoModoActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/PrimerLayout">
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+         />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SegundoLayout"
+        android:layout_width="216dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/PrimerLayout"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/plantas"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="Tipos Plantas" />
+
+        <Spinner
+            android:id="@+id/sp_TipoPlanta"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="428dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TercerLayout"
+        android:layout_width="307dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/SegundoLayout"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:text="Aceptar" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/TercerLayout"
+            android:layout_alignEnd="@+id/TercerLayout"
+            android:layout_weight="1"
+            android:text="Cancelar" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CuartoLayout"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TercerLayout"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/QuintoLayout"
+        android:layout_below="@id/CuartoLayout"
+        android:layout_marginTop="10sp">
+    <TextView
+        android:id="@+id/tvApi2"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+         />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/SextoLayout"
+        android:layout_below="@id/QuintoLayout"
+        android:layout_marginTop="10sp">
+    <TextView
+        android:id="@+id/tvApi3"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

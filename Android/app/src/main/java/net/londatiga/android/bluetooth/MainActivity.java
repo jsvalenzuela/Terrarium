@@ -84,11 +84,6 @@ public class MainActivity extends Activity {
         btnBuscar = (Button) findViewById(R.id.btnBuscar);
 
 
-        //agregado boton automatico
-        //btnModoAutomatico = (Button) findViewById(R.id.btnModoAutomatico);
-        //btnModoAutomatico.setEnabled(true);
-        //btnModoAutomatico.setOnClickListener(btnModoAutomaticoListener);
-
         //Se crea un adaptador para podermanejar el bluethoot del celular
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -204,7 +199,6 @@ public class MainActivity extends Activity {
         btnActivar.setText("Activar");
         btnActivar.setEnabled(false);
 
-      //  btnEmparejar.setEnabled(false);
         btnBuscar.setEnabled(false);
     }
 
@@ -269,28 +263,6 @@ public class MainActivity extends Activity {
     };
 
 
-    //Metodo que actua como Listener de los eventos que ocurren en los componentes graficos de la activty
-   /* private View.OnClickListener btnEmparejarListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-
-            if (pairedDevices == null || pairedDevices.size() == 0) {
-                showToast("No se encontraron dispositivos emparejados");
-            } else {
-                ArrayList<BluetoothDevice> list = new ArrayList<BluetoothDevice>();
-
-                list.addAll(pairedDevices);
-
-                Intent intent = new Intent(MainActivity.this, DeviceListActivity.class);
-
-                intent.putParcelableArrayListExtra("device.list", list);
-
-                startActivity(intent);
-            }
-        }
-    };*/
 
     private View.OnClickListener btnBuscarListener = new View.OnClickListener() {
         @Override
@@ -315,29 +287,6 @@ public class MainActivity extends Activity {
         }
     };
 
-   /* private View.OnClickListener btnModoAutomaticoListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-           Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-
-           // if (pairedDevices == null || pairedDevices.size() == 0) {
-             //   showToast("No se encontraron dispositivos emparejados");
-            //} else {
-                ArrayList<BluetoothDevice> list = new ArrayList<BluetoothDevice>();
-
-                list.addAll(pairedDevices);
-
-                Intent intent = new Intent(MainActivity.this, AutomaticoModoActivity.class);
-
-                intent.putParcelableArrayListExtra("device.list", list);
-                intent.putExtra("modoElegido", "automatico");
-                startActivity(intent);
-           //}
-
-
-        }
-    };*/
 
     private DialogInterface.OnClickListener btnCancelarDialogListener = new DialogInterface.OnClickListener() {
         @Override

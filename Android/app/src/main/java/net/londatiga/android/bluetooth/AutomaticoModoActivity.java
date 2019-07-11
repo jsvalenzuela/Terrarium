@@ -61,11 +61,6 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
         Bundle extras=intent.getExtras();
         address= extras.getString("Direccion_Bluethoot");
 
-        //obtengo por medio de un Bundle del intent la lista de dispositivos encontrados
-        //mDeviceList = getIntent().getExtras().getParcelableArrayList("device.list");
-
-        //Obtengo el modo que me servira para iniciar el activity correspondiente
-        //modoElegido = getIntent().getExtras().getString("modoElegido");
 
         hiloApi = new HiloApi();
         setContentView(R.layout.automatico_modo);
@@ -106,7 +101,6 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
 
     public boolean checkLocationPermission(String permission)
     {
-        //String permission = "android.permission.ACCESS_FINE_LOCATION";
         int res = this.checkCallingOrSelfPermission(permission);
         return (res == PackageManager.PERMISSION_GRANTED);
     }
@@ -141,7 +135,7 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
                                 Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                         Intent settingsIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                         startActivity(settingsIntent);
-                        //AutomaticoModoActivity.this.startActivity(intent);
+
                     }
                 });
     }
@@ -158,13 +152,8 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
 
         if (!gpsEnable) {
             showSettingsAlert("GPS");
-            //Intent settingsIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-            //startActivity(settingsIntent);
         }
         if(!checkLocationPermission("android.permission.ACCESS_FINE_LOCATION")){
-        /*if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
-                PackageManager.PERMISSION_GRANTED) {*/
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,}, 1001);
 
         }
@@ -213,8 +202,6 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
             setEstadistica(localidadObtenida);
             setClima(localidadObtenida);
             setTipoSuelo();
-
-            //showToast(tipoSuelo+" "+tipoPlanta);
         }
 
     }
@@ -301,7 +288,6 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
             Integer temperatura = jsonObject.getJSONObject("clima").getInt("temperatura");
              this.probabilidad = jsonObject.getJSONObject("clima").getInt("probabilidad");
 
-           // tvApi.setText(nombre +" " + temperatura + " " + probabilidad);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -327,9 +313,7 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
                 intent.putExtra("humedadRecibida",Integer.toString(huMax));
                 intent.putExtra("sueloRecibido",tipoSuelo);
                 intent.putExtra("temperaturaRecibida",Integer.toString(tempMax));
-                //intent.putParcelableArrayListExtra("device.list", mDeviceList);
-                //intent.putExtra("modoElegido", "automatico");
-                //intent.putExtra("humedadPlanta", huMax.toString());
+
                 startActivity(intent);
             } catch (JSONException e) {
                 showPlantaInexisisteAlert();
@@ -343,8 +327,6 @@ public class AutomaticoModoActivity extends Activity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        //String text = adapterView.getItemAtPosition(i).toString();
-        //Toast.makeText(adapterView.getContext(),text,Toast.LENGTH_LONG).show();
         
     }
 

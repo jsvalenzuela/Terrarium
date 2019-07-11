@@ -102,27 +102,6 @@ public class activity_comunicacion extends Activity
         swicthIluminacion=(Switch) findViewById(R.id.sw_Iluminacion);
         switchRiego = (Switch)findViewById(R.id.sw_Riego);
 
-       /*
-        //Se llena el spinner con los modos
-        String[] vec_modo = {"Manual","Inteligente"};
-        comboModo.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, vec_modo));
-        comboModo.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-            //@Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
-            {
-                modo= (String) adapterView.getItemAtPosition(position);
-                mConnectedThread.write("#"+modo+"/"+ventilacion+"/"+techoDescubierto+"/"+iluminacion+";");
-                showToast("Cambiando a modo "+modo);
-            }
-
-            //@Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // vacio
-
-            }
-        });*/
 
         //Configuracion del switch de ventilacion
         switchVentilacion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

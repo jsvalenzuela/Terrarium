@@ -44,10 +44,6 @@ public class Localizacion implements LocationListener {
         localidad = localidad.replace(" " , "%20");
         automaticoModoActivity.setLocalidadObtenida(localidad);
 
-        //automaticoModoActivity.setClima(localidad);
-        //automaticoModoActivity.setEstadistica(localidad);
-        //automaticoModoActivity.setClima(localidad);
-        ///automaticoModoActivity.setEstadistica(localidad);
     }
 
     @Override
